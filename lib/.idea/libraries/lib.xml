@@ -1,0 +1,35 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/opentest4j-1.2.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/opentest4j-1.2.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-platform-commons-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-jupiter-params-5.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/apiguardian-api-1.1.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-jupiter-api-5.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/apiguardian-api-1.1.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-platform-engine-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/snakeyaml-1.29.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-jupiter-api-5.7.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-jupiter-engine-5.7.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/snakeyaml-1.29-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-jupiter-5.7.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/snakeyaml-1.29-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/opentest4j-1.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-platform-engine-1.7.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-jupiter-engine-5.7.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-platform-engine-1.7.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-jupiter-api-5.7.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/apiguardian-api-1.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-jupiter-5.7.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-platform-commons-1.7.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-jupiter-params-5.7.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-jupiter-engine-5.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-jupiter-5.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-jupiter-params-5.7.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/junit-platform-commons-1.7.0-sources.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
