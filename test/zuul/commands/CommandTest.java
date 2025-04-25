@@ -1,10 +1,10 @@
 package zuul.commands;
 
-import org.junit.jupiter.api.Test;
-import zuul.Game;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
+
+import zuul.Game;
 
 public class CommandTest
 {
@@ -59,7 +59,7 @@ public class CommandTest
         String actual = game.processCommand("back");
         assertTrue( actual.contains("main entrance"),"main entrance should be contained: "+actual);
         actual = game.processCommand("back");
-        assertTrue( actual.contains("can't remember"),"can't remember should be contained");
+        assertTrue( actual.contains("You cannot go back any further."),"'You cannot go back any further.' should be contained");
         
       
     }

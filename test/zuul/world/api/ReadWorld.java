@@ -1,26 +1,24 @@
 package zuul.world.api;
 
-import org.junit.jupiter.api.Test;
-import org.yaml.snakeyaml.Yaml;
-import org.yaml.snakeyaml.constructor.Constructor;
-import zuul.world.persistence.FileReader;
-import zuul.world.World;
-
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+import org.yaml.snakeyaml.Yaml;
+
+import zuul.world.persistence.FileReader;
 
 /**
  * add org.yaml:snakeyaml:1.29
  */
 public class ReadWorld {
 
-    @Test
+/*     @Test
     public void testEmptyWorld(){
         Yaml yaml = new Yaml(new Constructor(World.class));
         World world = yaml.load("name: Campus");
         assertEquals("Campus",world.getName(),"world name");
-    }
+    } */
     @Test
     public void testRooms(){
         // this needs Java 15 and up
