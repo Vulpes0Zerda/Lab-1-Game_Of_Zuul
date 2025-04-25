@@ -42,4 +42,15 @@ public class Inventory implements Iterable<Item>
     public int getWeight() {
         return items.values().stream().reduce(0,(sum,item) -> sum + item.getWeight(), Integer::sum);
     }
+
+    public Equippables getEquippable(String name) { //Ergänzung für die Equip Klasse
+        Item item = get(name); // nutzt bereits deine Logik mit findItemName()
+
+        if (item instanceof Equippables) {
+            return (Equippables) item;
+        }
+
+        return null;
+    }
+
 }
