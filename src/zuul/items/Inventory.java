@@ -1,5 +1,7 @@
 package zuul.items;
-import java.util.*;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
 public class Inventory implements Iterable<Item>
 {
@@ -43,8 +45,8 @@ public class Inventory implements Iterable<Item>
         return items.values().stream().reduce(0,(sum,item) -> sum + item.getWeight(), Integer::sum);
     }
 
-    public Equippables getEquippable(String name) { //Ergänzung für die Equip Klasse
-        Item item = get(name); // nutzt bereits deine Logik mit findItemName()
+    public Equippables getEquippable(String name) {
+        Item item = get(name);
 
         if (item instanceof Equippables) {
             return (Equippables) item;

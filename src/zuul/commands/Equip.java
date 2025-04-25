@@ -16,12 +16,15 @@ public class Equip extends Command {
         }
         String itemName = getParameter(); //jacket, hat?
 
-        Equippables item = gameStatus.getInventory().getEquippable(itemName);
+        Equippables item = gameStatus.getPlayer().getInventory().getEquippable(itemName);
         if (item == null) {
-            return "item " + itemName + " does not exist or is not in your inventory";
+            return itemName + " does not exist or is not in your inventory.\n";
+        }else{
+            if(gameStatus.getPlayer().equipItem(item)){
+                return itemName + " is equipped now.\n";
+            }else{
+                return itemName + " could not be equipped.\n";
+            }
         }
-
-        gameStatus.getPlayer().equipItem(item); //getPlayer muss noch in die Player Klasse
-        return item.getName() + " equipped";
     }
 }

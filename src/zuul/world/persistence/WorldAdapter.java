@@ -140,6 +140,7 @@ public class WorldAdapter {
         Room room = world.getRooms().get(roomID);
         room.addItem(item);
     }
+
     private void addItemToRooms(World world, Item item, Object rooms) {
         // necessary as Java uses static binding here.
         if(rooms instanceof String) {

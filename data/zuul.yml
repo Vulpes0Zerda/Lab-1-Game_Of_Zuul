@@ -8,7 +8,7 @@ items:
   milk:
     description: "a bottle of milk"
     weight: 333
-    room: ['pub','pub']
+    room: ["pub", "pub"]
   cacao:
     description: "a bottle of cacao"
     weight: 333
@@ -17,6 +17,17 @@ items:
     description: "a 10-volume manual of the Java Programming Language"
     weight: 2000
     room: lab
+  dumbbell:
+    description: "a very heavy dumbbell"
+    weight: 15000
+    room: cellar
+equippables:
+  tshirt:
+    description: "a FSR4 T-Shirt."
+    weight: 500
+    room: pub
+    durability: 10
+    slot: "Breastplate"
 rooms:
   outside:
     description: "outside the main entrance of the university"

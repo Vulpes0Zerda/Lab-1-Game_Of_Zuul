@@ -1,25 +1,33 @@
 package zuul.world;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
 import zuul.items.Inventory;
 import zuul.items.Item;
+import zuul.items.Equippables;
 
 
 public class Player {
-  private final int maxCarryWeight = 22000;
-  private int currentCarryWeight = 0;
+  private static final int maxCarryWeight = 22000;
+  private HashMap<String, Equippables> equippedItems;
   private Inventory inventory;
   private Room currentRoom;
   private Room beamer;
   private Set<Room> visited;
   private ArrayList<Room> history;
 
-  private boolean playing = true;
-
   public Player(Room initialRoom){
+    equippedItems = new HashMap<String, Equippables>();
+    equippedItems.put("Helmet", null);
+    equippedItems.put("Breastplate", null);
+    equippedItems.put("Gloves", null);
+    equippedItems.put("Leggings", null);
+    equippedItems.put("Boots", null);
+    equippedItems.put("Hand", null);
+    equippedItems.put("Off-hand", null);
     inventory = new Inventory();
     visited = new HashSet<>();
     history = new ArrayList<>();
@@ -33,7 +41,7 @@ public class Player {
   }
 
   private String recordVisited(Room room){
-    String visitedAllRooms = "\nCongrats! You've visited all Rooms";
+    String visitedAllRooms = "\nCongrats! You've visited all Rooms\n";
 
     visited.add(room);
     
@@ -52,6 +60,27 @@ public class Player {
       inventory.add(pickedUpItem);
 
       return true;
+    }
+  }
+
+  public boolean equipItem(Equippables toEquip){
+
+    if(equippedItems.get(toEquip.getSlot())!= null){
+
+      inventory.add(equippedItems.get(toEquip.getSlot()));
+      equippedItems.put(toEquip.getSlot(),toEquip);
+      inventory.remove(toEquip.getName());
+      return true;
+
+    }else if(equippedItems.get(toEquip.getSlot())== null){
+
+      equippedItems.put(toEquip.getSlot(),toEquip);
+      inventory.remove(toEquip.getName());
+      return true;
+
+    }else{
+
+      return false;
     }
   }
 
@@ -95,6 +124,10 @@ public class Player {
   }
 
   public String getLocationDescription(){
-      return "You are " +currentRoom.getDescription();
+    return "You are " +currentRoom.getDescription();
+  }
+
+  public int getMaxCarryWeight(){
+    return maxCarryWeight;
   }
 }
