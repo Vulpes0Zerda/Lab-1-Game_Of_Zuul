@@ -1,7 +1,6 @@
 package zuul.commands;
 
 import zuul.GameStatus;
-import zuul.commands.Command;
 
 public class Quit extends Command
 {
@@ -21,7 +20,7 @@ public class Quit extends Command
             return "zuul.commands.Quit what?";
         }
         else {
-            gameStatus.quit(); // signal that we want to quit
+            gameStatus.stopPlaying(); // signal that we want to quit
             return "Thank you for playing.  Good bye.\n";  
         }
     }

@@ -20,14 +20,14 @@ public class Drop extends Command
         String itemName = getParameter();
 
         // Try to take the item.
-        Item item = gameStatus.getInventory().remove(itemName);
+        Item item = gameStatus.getPlayer().getInventory().remove(itemName);
         
 
         if (item == null) {
             return"You have no "+itemName+"!";
         }
         else {
-            gameStatus.getLocation().addItem(item);
+            gameStatus.getPlayer().getLocation().addItem(item);
             return "You dropped the "+ item.getName();
         }
     }
