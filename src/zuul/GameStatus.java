@@ -5,11 +5,15 @@ import zuul.world.Room;
 
 public class GameStatus
 {
+
     private Player currentPlayer;
+    private MoveCounter moveCounter;
+
     private boolean playing = true;
-    
+
     public GameStatus(Room initialRoom){
         currentPlayer = new Player(initialRoom);
+        this.moveCounter = new MoveCounter(50);
     }
 
 
