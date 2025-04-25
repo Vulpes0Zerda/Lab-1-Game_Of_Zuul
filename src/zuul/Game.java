@@ -94,5 +94,4 @@ public class Game
         System.out.println();
     }
     public static void playInstantly(){new Game().play();}
-
 }

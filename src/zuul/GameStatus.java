@@ -14,12 +14,15 @@ public class GameStatus
     private Set<Room> visited;
     private ArrayList<Room> history;
     private Inventory inventory;
+    private MoveCounter moveCounter;
     private boolean playing = true;
-    
+
     public GameStatus(Room initialRoom){
         inventory = new Inventory();
         visited = new HashSet<>();
+        this.moveCounter = new MoveCounter(50);
         history = new ArrayList<>();
+
         setLocation(initialRoom);
     }
 
