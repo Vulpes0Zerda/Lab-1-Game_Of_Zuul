@@ -13,10 +13,13 @@ public class GameStatus
     private Room beamer;
     private Set<Room> visited;
     private Inventory inventory;
-    
+    private MoveCounter moveCounter;
+
+
     public GameStatus(Room initialRoom){
         inventory = new Inventory();
         visited = new HashSet<>();
+        this.moveCounter = new MoveCounter(50);
         setLocation(initialRoom);
     }
 
