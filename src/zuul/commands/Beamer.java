@@ -15,14 +15,14 @@ public class Beamer extends Command
 
         switch(getParameter()){
             case "charge":
-                gameStatus.chargeBeamer(); 
-                return "The beamer was loaded with your current location.";
+                gameStatus.getPlayer().chargeBeamer(); 
+                return "The beamer was loaded with your current location. \n";
             case "fire" : 
-                if (gameStatus.fireBeamer()) 
-                return "The beamer beamed you back.\n"+gameStatus.getLocationDescription();
+                if (gameStatus.getPlayer().fireBeamer()) 
+                return "The beamer beamed you back.\n"+gameStatus.getPlayer().getLocationDescription()+"\n";
                 else return "The beamer was not loaded.\n";
             default: 
-                return "The beamer can be charge d or fire d.";
+                return "The beamer can be charge d or fire d.\n";
             }
         }
     }

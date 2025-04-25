@@ -21,14 +21,14 @@ public class Go extends Command
         String direction = getParameter();
 
         // Try to leave current room.
-        Room nextRoom = gameStatus.getLocation().getExit(direction);
+        Room nextRoom = gameStatus.getPlayer().getLocation().getExit(direction);
 
         if (nextRoom == null) {
             return"There is no door!";
         }
         else {
-            String r = gameStatus.setLocation(nextRoom);
-            return r + gameStatus.getLocationDescription();
+            String r = gameStatus.getPlayer().setLocation(nextRoom);
+            return r + gameStatus.getPlayer().getLocationDescription();
         }
     }
 }

@@ -7,6 +7,6 @@ public class Inventory extends Command
         super(parameters);
     }
     public String commandImplementation(GameStatus gameStatus){
-        return gameStatus.getInventoryDescription();
+        return gameStatus.getPlayer().getInventory().getDescription();
     }
 }

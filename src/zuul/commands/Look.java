@@ -1,7 +1,6 @@
 package zuul.commands;
 
 import zuul.GameStatus;
-import zuul.commands.Command;
 
 public class Look extends Command
 {
@@ -9,6 +8,6 @@ public class Look extends Command
         super(parameters);
     }
     public String commandImplementation(GameStatus gameStatus){
-        return gameStatus.getLocationDescription();
+        return gameStatus.getPlayer().getLocationDescription();
     }
 }

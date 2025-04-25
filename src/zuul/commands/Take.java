@@ -2,6 +2,7 @@ package zuul.commands;
 
 import zuul.GameStatus;
 import zuul.items.Item;
+import zuul.world.Player;
 
 public class Take extends Command
 {
@@ -20,21 +21,19 @@ public class Take extends Command
         String itemName = getParameter();
 
         // Try to take the item.
-        Item item = gameStatus.getLocation().removeItem(itemName);
+        Item item = gameStatus.getPlayer().getLocation().removeItem(itemName);
 
         if (item == null) {
             return "There is no "+itemName+"!";
         }
-        int inventoryWeight = gameStatus.getInventory().getWeight();
 
-        int carryWeight = gameStatus.maxCarryWeight();
-        if (item.getWeight()+gameStatus.getInventory().getWeight() > gameStatus.maxCarryWeight()){
-            return String.format("You cannot pick up the %s - it's too heavy.\nYou are already carrying %f kg!",
-                    itemName,0.001*inventoryWeight);
+        Player player = gameStatus.getPlayer();
+
+        if (player.addItemToInventory(item)){
+            return "You cannot pick up the "+item.getName()+" - it's too heavy.("+item.getWeight()+")\nYou are already carrying "+player.getInventory().getWeight()+" kg!\n";
         }
         else {
-            gameStatus.addItemToInventory(item);
-            return "You took the "+ item.getName();
+            return "You took the "+ item.getName()+"\n";
         }
     }
 }

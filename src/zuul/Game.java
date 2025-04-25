@@ -90,7 +90,7 @@ public class Game
         System.out.println();
         System.out.println(world.getDescription());
 
-        System.out.println(gameStatus.getLocationDescription());
+        System.out.println(gameStatus.getPlayer().getLocationDescription());
         System.out.println();
     }
     public static void playInstantly(){new Game().play();}
