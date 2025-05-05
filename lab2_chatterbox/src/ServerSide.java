@@ -4,7 +4,7 @@ import java.io.*;
 public class ServerSide {
     private Socket socket = null;
     private ServerSocket server = null;
-    private BufferedReader in = null;
+    private BufferedReader input = null;
 
     public ServerSide(int port) {
         // Step 1 task 1
@@ -15,16 +15,16 @@ public class ServerSide {
             socket = server.accept();
             System.out.println("Client accepted");
 
-            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
             String line = "";
-            while ((line = in.readLine()) != null) {
+            while ((line = input.readLine()) != null) {
                 System.out.println("Received: " + line);
             }
 
             System.out.println("Closing connection");
             socket.close();
-            in.close();
+            input.close();
         } catch(IOException i) {
             System.out.println(i);
         }
