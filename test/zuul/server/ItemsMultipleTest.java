@@ -1,10 +1,10 @@
-package zuul;
+package zuul.server;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static zuul.TestHelper.assertContains;
-import static zuul.TestHelper.assertDoesNotContain;
+import static zuul.server.TestHelper.assertContains;
+import static zuul.server.TestHelper.assertDoesNotContain;
 
 public class ItemsMultipleTest
 {

@@ -1,10 +1,10 @@
-package zuul.commands;
+package zuul.server.commands;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
-import zuul.Game;
+import zuul.server.Game;
 
 public class CommandTest
 {

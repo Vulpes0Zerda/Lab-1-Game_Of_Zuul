@@ -1,10 +1,10 @@
-package zuul.commands;
+package zuul.server.commands;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import zuul.Game;
+import zuul.server.Game;
 
-import static zuul.TestHelper.assertContains;
+import static zuul.server.TestHelper.assertContains;
 
 public class ItemWeightTest {
 

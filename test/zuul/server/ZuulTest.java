@@ -1,8 +1,7 @@
-package zuul;
-
-import org.junit.jupiter.api.BeforeEach;
+package zuul.server;
 
 import static org.junit.jupiter.api.Assertions.fail;
+import org.junit.jupiter.api.BeforeEach;
 public class ZuulTest
 {
     protected Game game;

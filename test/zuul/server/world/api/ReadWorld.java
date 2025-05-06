@@ -1,4 +1,4 @@
-package zuul.world.api;
+package zuul.server.world.api;
 
 import java.util.Map;
 
@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.yaml.snakeyaml.Yaml;
 
-import zuul.world.persistence.FileReader;
+import zuul.server.world.persistence.FileReader;
 
 /**
  * add org.yaml:snakeyaml:1.29

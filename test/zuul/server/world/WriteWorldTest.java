@@ -1,13 +1,13 @@
-package zuul.world;
-
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import zuul.items.Item;
-import zuul.world.persistence.WorldAdapter;
+package zuul.server.world;
 
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import zuul.server.items.Item;
+import zuul.server.world.persistence.WorldAdapter;
 
 public class WriteWorldTest {
     WorldAdapter wa = new WorldAdapter();

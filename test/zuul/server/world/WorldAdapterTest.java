@@ -1,14 +1,14 @@
-package zuul.world;
+package zuul.server.world;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import zuul.items.Item;
-import zuul.world.persistence.WorldAdapter;
+import zuul.server.items.Item;
+import zuul.server.world.persistence.WorldAdapter;
 
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static zuul.TestHelper.assertContains;
+import static zuul.server.TestHelper.assertContains;
 
 class WorldAdapterTest {
     WorldAdapter wa = new WorldAdapter();

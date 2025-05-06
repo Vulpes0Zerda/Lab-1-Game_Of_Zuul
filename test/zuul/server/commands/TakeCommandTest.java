@@ -1,8 +1,8 @@
-package zuul.commands;
+package zuul.server.commands;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import zuul.ZuulTest;
+import zuul.server.ZuulTest;
 
 
 public class TakeCommandTest extends ZuulTest

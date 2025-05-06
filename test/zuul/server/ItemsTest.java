@@ -1,4 +1,4 @@
-package zuul;
+package zuul.server;
 
 import org.junit.jupiter.api.Test;
 

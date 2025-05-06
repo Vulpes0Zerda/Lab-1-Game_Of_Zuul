@@ -8,16 +8,15 @@
     <artifactId>zuul</artifactId>
     <version>0.2</version>
 
-
-
     <build>
+
         <sourceDirectory>src</sourceDirectory>
         <testSourceDirectory>src</testSourceDirectory>
+
         <plugins>
             <plugin>
             <artifactId>maven-assembly-plugin</artifactId>
              <executions>
-
                     <execution>
                         <id>make-server</id>
                         <phase>package</phase>
@@ -37,7 +36,6 @@
                             <appendAssemblyId>false</appendAssemblyId>
                         </configuration>
                     </execution>
-
                     <execution>
                         <id>make-client</id>
                         <phase>package</phase>
@@ -57,13 +55,10 @@
                             <appendAssemblyId>false</appendAssemblyId>
                         </configuration>
                     </execution>
-
                 </executions>
         </plugin>
         </plugins>
     </build>
-
-
 
     <dependencies>
         <dependency>
@@ -76,7 +71,5 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.7.0</version>
         </dependency>
-
-
     </dependencies>
 </project>
